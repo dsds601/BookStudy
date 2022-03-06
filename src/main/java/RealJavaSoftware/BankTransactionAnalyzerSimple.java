@@ -21,9 +21,12 @@ public class BankTransactionAnalyzerSimple {
         final List<BankTransaction> bankTransactions = bankStatementParser.parseLinesFrom(lines);
         final BankStatementProcessor bankStatementProcessor = new BankStatementProcessor(bankTransactions);
         collectSummary(bankStatementProcessor);
+
     }
 
     private static void collectSummary(final BankStatementProcessor bankStatementProcessor) {
+
+
         System.out.println("The total for all transaction is "+bankStatementProcessor.calculateTotalAmount());
 
         System.out.println("The total for transaction in January "+bankStatementProcessor.calculateTotalInMonth(Month.JANUARY));
