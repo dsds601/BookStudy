@@ -71,7 +71,6 @@ public class BankStatementProcessor {
     }
 
     public List<BankTransaction> findTransactions(final BankTransactionFilter bankTransactionFilter) {
-
         final List<BankTransaction> result = new ArrayList<>();
         for (BankTransaction bankTransaction : bankTransactions) {
             if(bankTransactionFilter.test(bankTransaction)) {
